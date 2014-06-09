@@ -1,0 +1,48 @@
+PODS:
+  - AFNetworking (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - DCIntrospect-ARC (0.0.7)
+  - Masonry (0.5.2)
+  - Ono (1.1.1)
+  - PonyDebugger (0.3.1):
+    - SocketRocket
+  - SDWebImage (3.6):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.6)
+  - SocketRocket (0.3.1-beta2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.2)
+  - DCIntrospect-ARC (~> 0.0)
+  - Masonry (~> 0.5)
+  - Ono (~> 1.1)
+  - PonyDebugger (~> 0.3)
+  - SDWebImage (~> 3.6)
+
+SPEC CHECKSUMS:
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  DCIntrospect-ARC: a40fbc1106efe321a10bb05ea179b49db6bb0e40
+  Masonry: ec0189e1a07af00913e4a1a335ea76887adc86e1
+  Ono: 176262e851304aff0a0d249838a33f33d31d04cb
+  PonyDebugger: 256e19c15c093e15f950f92b1a5017f3feb3c87e
+  SDWebImage: c6989652c1cdf27cbdf3f56957e2030f825af5bc
+  SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
+
+COCOAPODS: 0.33.1
