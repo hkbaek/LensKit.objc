@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^kLensResponseBlock)(NSArray *article, NSError *error);
+
 @interface LensApiManager : NSObject
 
 + (instancetype)sharedInstance;
+
+- (void)getArticlesAtPageNumber:(NSInteger)pageNumber onCompleteBlock:(kLensResponseBlock)onCompleteBlock;
+- (void)getArticlesAtUserID:(NSInteger)userID onCompleteBlock:(kLensResponseBlock)onCompleteBlock;
+- (void)getHottestArticles:(kLensResponseBlock)onCompleteBlock;
 
 @end

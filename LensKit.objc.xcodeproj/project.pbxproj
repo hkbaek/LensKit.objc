@@ -20,8 +20,9 @@
 		573E70291945A2D900EC2E04 /* LensKit_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 573E70281945A2D900EC2E04 /* LensKit_objcTests.m */; };
 		577521FE1945AE1E00476104 /* LensApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 577521FD1945AE1E00476104 /* LensApiManager.m */; };
 		577522021945AE6800476104 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 577522011945AE6800476104 /* AppDelegate.m */; };
-		577522051945AEC700476104 /* ArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577522041945AEC700476104 /* ArticleListViewController.m */; };
-		577522081945AEDA00476104 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577522071945AEDA00476104 /* ArticleDetailViewController.m */; };
+		57BB55A2194843DC00D718D1 /* ArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BB559E194843DC00D718D1 /* ArticleDetailViewController.m */; };
+		57BB55A3194843DC00D718D1 /* ArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BB55A0194843DC00D718D1 /* ArticleListViewController.m */; };
+		57BB55A6194843FA00D718D1 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BB55A5194843FA00D718D1 /* ArticleModel.m */; };
 		DE833A0BC83747C6B73D7AAC /* libPods-LensKit.objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D95980FB144FF1A55F3F0E /* libPods-LensKit.objc.a */; };
 /* End PBXBuildFile section */
 
@@ -54,10 +55,12 @@
 		577521FD1945AE1E00476104 /* LensApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LensApiManager.m; sourceTree = "<group>"; };
 		577522001945AE6800476104 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		577522011945AE6800476104 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		577522031945AEC700476104 /* ArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleListViewController.h; path = Classes/ArticleListViewController.h; sourceTree = "<group>"; };
-		577522041945AEC700476104 /* ArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleListViewController.m; path = Classes/ArticleListViewController.m; sourceTree = "<group>"; };
-		577522061945AEDA00476104 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleDetailViewController.h; path = Classes/ArticleDetailViewController.h; sourceTree = "<group>"; };
-		577522071945AEDA00476104 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleDetailViewController.m; path = Classes/ArticleDetailViewController.m; sourceTree = "<group>"; };
+		57BB559D194843DC00D718D1 /* ArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleDetailViewController.h; sourceTree = "<group>"; };
+		57BB559E194843DC00D718D1 /* ArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleDetailViewController.m; sourceTree = "<group>"; };
+		57BB559F194843DC00D718D1 /* ArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleListViewController.h; sourceTree = "<group>"; };
+		57BB55A0194843DC00D718D1 /* ArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleListViewController.m; sourceTree = "<group>"; };
+		57BB55A4194843FA00D718D1 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		57BB55A5194843FA00D718D1 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
 		64D95980FB144FF1A55F3F0E /* libPods-LensKit.objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LensKit.objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD24CFEBFB764D07A30E51D7 /* Pods-LensKit.objc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LensKit.objc.xcconfig"; path = "Pods/Pods-LensKit.objc.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,8 +125,8 @@
 		573E70091945A2D900EC2E04 /* LensKit.objc */ = {
 			isa = PBXGroup;
 			children = (
-				577521FF1945AE5800476104 /* Classes */,
 				577521FB1945ADFC00476104 /* ServiceLayer */,
+				577521FF1945AE5800476104 /* Classes */,
 				573E70151945A2D900EC2E04 /* Images.xcassets */,
 				573E700A1945A2D900EC2E04 /* Supporting Files */,
 			);
@@ -173,12 +176,32 @@
 			children = (
 				577522001945AE6800476104 /* AppDelegate.h */,
 				577522011945AE6800476104 /* AppDelegate.m */,
-				577522031945AEC700476104 /* ArticleListViewController.h */,
-				577522041945AEC700476104 /* ArticleListViewController.m */,
-				577522061945AEDA00476104 /* ArticleDetailViewController.h */,
-				577522071945AEDA00476104 /* ArticleDetailViewController.m */,
+				57BB55A1194843DC00D718D1 /* Models */,
+				57BB559C194843DC00D718D1 /* Controllers */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		57BB559C194843DC00D718D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57BB559F194843DC00D718D1 /* ArticleListViewController.h */,
+				57BB55A0194843DC00D718D1 /* ArticleListViewController.m */,
+				57BB559D194843DC00D718D1 /* ArticleDetailViewController.h */,
+				57BB559E194843DC00D718D1 /* ArticleDetailViewController.m */,
+			);
+			name = Controllers;
+			path = Classes/Controllers;
+			sourceTree = "<group>";
+		};
+		57BB55A1194843DC00D718D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57BB55A4194843FA00D718D1 /* ArticleModel.h */,
+				57BB55A5194843FA00D718D1 /* ArticleModel.m */,
+			);
+			name = Models;
+			path = Classes/Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				577521FE1945AE1E00476104 /* LensApiManager.m in Sources */,
-				577522081945AEDA00476104 /* ArticleDetailViewController.m in Sources */,
-				577522051945AEC700476104 /* ArticleListViewController.m in Sources */,
 				573E70101945A2D900EC2E04 /* main.m in Sources */,
+				57BB55A6194843FA00D718D1 /* ArticleModel.m in Sources */,
+				57BB55A2194843DC00D718D1 /* ArticleDetailViewController.m in Sources */,
 				577522021945AE6800476104 /* AppDelegate.m in Sources */,
+				57BB55A3194843DC00D718D1 /* ArticleListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

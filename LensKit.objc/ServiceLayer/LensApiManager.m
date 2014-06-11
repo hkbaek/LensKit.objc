@@ -7,13 +7,13 @@
 //
 
 #import "LensApiManager.h"
+#import <AFNetworking/AFNetworking.h>
+#import "AFOnoResponseSerializer.h"
+#import "Ono.h"
 
-@interface LensApiManager ()
-{
-    
-}
+#import "ArticleModel.h"
 
-@end
+static NSString * const LensBaseURLString = @"http://dna.daum.net/";
 
 @implementation LensApiManager
 
@@ -21,26 +21,44 @@
 
 + (instancetype)sharedInstance
 {
-    static LensApiManager *sharedInstance = nil;
+    static LensApiManager *_sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[LensApiManager alloc] init];
+        _sharedInstance = [[LensApiManager alloc] init];
     });
     
-    return sharedInstance;
+    return _sharedInstance;
 }
 
-- (instancetype)init
+#pragma mark - Request
+
+- (void)getArticlesAtPageNumber:(NSInteger)pageNumber onCompleteBlock:(kLensResponseBlock)onCompleteBlock
 {
-    self = [super init];
-    if(self)
-    {
-    }
-    
-    return self;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFOnoResponseSerializer HTMLResponseSerializer];
+    [manager GET:@"http://dna.daum.net/lens/page/1"
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             NSArray *articles = [ArticleModel parseFromResponse:responseObject];
+             if(onCompleteBlock)
+             {
+                 onCompleteBlock(articles, nil);
+             }
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             if(onCompleteBlock)
+             {
+                 onCompleteBlock([NSArray new], error);
+             }
+         }];
 }
 
-#pragma mark - Private Methods
+- (void)getArticlesAtUserID:(NSInteger)userID onCompleteBlock:(kLensResponseBlock)onCompleteBlock
+{
+}
+
+- (void)getHottestArticles:(kLensResponseBlock)onCompleteBlock
+{
+}
 
 @end

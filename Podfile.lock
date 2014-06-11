@@ -18,9 +18,14 @@ PODS:
   - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AFOnoResponseSerializer (0.0.1):
+    - AFNetworking (~> 2.2)
+    - Ono (~> 0.0.3)
   - DCIntrospect-ARC (0.0.7)
+  - KINWebBrowser (0.2.4)
   - Masonry (0.5.2)
-  - Ono (1.1.1)
+  - NSObject+AutoDescription (0.1)
+  - Ono (0.0.5)
   - PonyDebugger (0.3.1):
     - SocketRocket
   - SDWebImage (3.6):
@@ -30,17 +35,22 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2)
+  - AFOnoResponseSerializer (~> 0.0)
   - DCIntrospect-ARC (~> 0.0)
+  - KINWebBrowser (~> 0.2)
   - Masonry (~> 0.5)
-  - Ono (~> 1.1)
+  - NSObject+AutoDescription (~> 0.1)
   - PonyDebugger (~> 0.3)
   - SDWebImage (~> 3.6)
 
 SPEC CHECKSUMS:
   AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  AFOnoResponseSerializer: 3564afc8153f030266ff7fddfa843ad9b5770f03
   DCIntrospect-ARC: a40fbc1106efe321a10bb05ea179b49db6bb0e40
+  KINWebBrowser: 466c88a47d28e36ca202f312d9b8f756791b8c63
   Masonry: ec0189e1a07af00913e4a1a335ea76887adc86e1
-  Ono: 176262e851304aff0a0d249838a33f33d31d04cb
+  NSObject+AutoDescription: 741983bfabbfd2813c77078fdc91526853bad16d
+  Ono: 7cd10e5f32514cd58a4ee2e4400d2c5272b92dc0
   PonyDebugger: 256e19c15c093e15f950f92b1a5017f3feb3c87e
   SDWebImage: c6989652c1cdf27cbdf3f56957e2030f825af5bc
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
